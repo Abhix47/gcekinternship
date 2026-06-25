@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP32 LED Control</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #ffffff;
+            --accent-on: #00e676;
+            --accent-off: #ff1744;
+            --btn-hover: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 100%;
+            max-width: 350px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        p {
+            color: #888888;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+
+        .status-container {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        #status-text {
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .btn {
+            background-color: transparent;
+            border: 2px solid #444444;
+            color: var(--text-color);
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            outline: none;
+            width: 100%;
+        }
+
+        .btn.led-on {
+            border-color: var(--accent-on);
+            color: var(--accent-on);
+            box-shadow: 0 0 15px rgba(0, 230, 118, 0.2);
+        }
+
+        .btn.led-off {
+            border-color: var(--accent-off);
+            color: var(--accent-off);
+            box-shadow: 0 0 15px rgba(255, 23, 68, 0.2);
+        }
+
+        .btn:hover {
+            background-color: var(--btn-hover);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>PixaVolt Control</h1>
+        <p>Firebase IoT Dashboard</p>
+        
+        <div class="status-container">
+            LED Status: <span id="status-text">Connecting...</span>
+        </div>
+
+        <button class="btn" id="led-button" disabled>Loading...</button>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+
+        // Your exact configuration parameters
+        const firebaseConfig = {
+            apiKey: "AIzaSyBmtheV32mOas_7_fdIRKUYK6JNRTqo6l0",
+            authDomain: "ledcontrolproject-a827f.firebaseapp.com",
+            databaseURL: "https://ledcontrolproject-a827f-default-rtdb.firebaseio.com",
+            projectId: "ledcontrolproject-a827f",
+            storageBucket: "ledcontrolproject-a827f.firebasestorage.app",
+            messagingSenderId: "557432058248",
+            appId: "1:557432058248:web:3257ac14347b9ec2e64a3d"
+        };
+
+        // Initialize Firebase Setup
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+        const ledRef = ref(database, 'led_state');
+
+        const ledButton = document.getElementById('led-button');
+        const statusText = document.getElementById('status-text');
+        let currentStatus = 0;
+
+        // Watch database for real-time changes
+        onValue(ledRef, (snapshot) => {
+            currentStatus = snapshot.val();
+            ledButton.disabled = false;
+
+            if (currentStatus === 1) {
+                statusText.innerText = "ON";
+                statusText.style.color = "var(--accent-on)";
+                ledButton.innerText = "Turn OFF";
+                ledButton.className = "btn led-on";
+            } else {
+                statusText.innerText = "OFF";
+                statusText.style.color = "var(--accent-off)";
+                ledButton.innerText = "Turn ON";
+                ledButton.className = "btn led-off";
+            }
+        });
+
+        // Push new value to database on click
+        ledButton.addEventListener('click', () => {
+            const nextState = currentStatus === 1 ? 0 : 1;
+            set(ledRef, nextState);
+        });
+    </script>
+</body>
+</html>
