@@ -2,7 +2,7 @@
 
 ## Internship Overview
 
-This repository contains the work completed during my internship at **Government Engineering College Kannur (GCEK)**. Throughout the internship, I explored various technologies related to software development, embedded systems, IoT, machine learning, PCB design, and cloud-based applications.
+This repository contains the work completed during my internship at **Government Engineering College Kannur (GCEK)**. Throughout the internship, I explored various technologies related to software development, embedded systems, IoT, machine learning, PCB design, cloud-based applications, and Edge AI through hands-on projects and practical sessions.
 
 ---
 
@@ -19,7 +19,9 @@ This repository contains the work completed during my internship at **Government
 - PlatformIO
 - Embedded C/C++
 - KiCad
-- IoT
+- Edge Impulse
+- MPU6050 Accelerometer
+- Edge IoT
 
 ---
 
@@ -36,6 +38,7 @@ This repository contains the work completed during my internship at **Government
 | Day 7 | ESP32 Switch Control & Wi-Fi LED Control |
 | Day 8 | ESP32 Firebase IoT LED Control |
 | Day 9 | KiCad PCB Design |
+| Day 10 | Edge IoT Gesture Recognition |
 
 ---
 
@@ -51,6 +54,7 @@ Day-06-ESP32-Basics
 Day-07-ESP32-Control
 Day-08-ESP32-Firebase-IoT
 Day-09-KiCad-PCB-Design
+Day-10-Edge-IoT-Gesture-Recognition
 ```
 
 ---
@@ -68,6 +72,7 @@ Day-09-KiCad-PCB-Design
 - ESP32 Firebase Realtime Database Integration
 - Firebase Web-Based LED Control
 - KiCad PCB Design Fundamentals
+- Edge IoT Motion Gesture Recognition using ESP32 and MPU6050
 
 ---
 
@@ -93,6 +98,8 @@ Day-09-KiCad-PCB-Design
 - HTTP/HTTPS Communication
 - IoT Application Development
 - Machine Learning Fundamentals
+- Edge AI Fundamentals
+- Motion Gesture Recognition
 - PCB Design using KiCad
 
 ---
@@ -107,4 +114,4 @@ Artificial Intelligence & Machine Learning Student
 
 ## Status
 
-🚧 Internship in Progress
+✅ Internship Completed
