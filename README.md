@@ -2,7 +2,7 @@
 
 ## Internship Overview
 
-This repository contains the work completed during my internship at **Government Engineering College Kannur (GCEK)**. The internship covers topics including Git, Web Development, Machine Learning, IoT, ESP32 programming, Firebase integration, and PCB design.
+This repository contains the work completed during my internship at **Government Engineering College Kannur (GCEK)**. Throughout the internship, I explored various technologies related to software development, embedded systems, IoT, machine learning, PCB design, and cloud-based applications.
 
 ---
 
@@ -10,11 +10,11 @@ This repository contains the work completed during my internship at **Government
 
 - Git & GitHub
 - HTML5 & CSS3
+- JavaScript
 - Firebase Hosting
 - Firebase Realtime Database
-- JavaScript
-- Python
 - Google Colab
+- Python
 - ESP32
 - PlatformIO
 - Embedded C/C++
@@ -30,11 +30,12 @@ This repository contains the work completed during my internship at **Government
 | Day 1 | Git & GitHub Setup |
 | Day 2 | Personal Portfolio Website & Firebase Hosting |
 | Day 3 | Machine Learning Theory |
-| Day 4 | Software Installation & Environment Setup (KiCad, JDK, Drivers) |
-| Day 5 | Decision Tree Model using Google Colab |
+| Day 4 | Software Installation & Development Environment Setup |
+| Day 5 | Decision Tree Implementation using Google Colab |
 | Day 6 | ESP32 Basics, GPIO & PWM LED Control |
 | Day 7 | ESP32 Switch Control & Wi-Fi LED Control |
-| Day 8 | ESP32 Firebase LED Control using Firebase Realtime Database |
+| Day 8 | ESP32 Firebase IoT LED Control |
+| Day 9 | KiCad PCB Design |
 
 ---
 
@@ -48,7 +49,8 @@ Day-04-Software-Setup
 Day-05-ML-Colab
 Day-06-ESP32-Basics
 Day-07-ESP32-Control
-Day-08-ESP32-Firebase-Control
+Day-08-ESP32-Firebase-IoT
+Day-09-KiCad-PCB-Design
 ```
 
 ---
@@ -57,24 +59,41 @@ Day-08-ESP32-Firebase-Control
 
 - Git & GitHub Repository Setup
 - Personal Portfolio Website
-- Machine Learning Decision Tree
-- ESP32 PWM LED Control
+- Firebase Hosting
+- Decision Tree Machine Learning Model
+- ESP32 GPIO Programming
+- ESP32 PWM LED Brightness Control
 - ESP32 Switch-Controlled LED
 - ESP32 Wi-Fi LED Control
-- ESP32 Firebase LED Control
-- Firebase Web Interface for LED Control
+- ESP32 Firebase Realtime Database Integration
+- Firebase Web-Based LED Control
+- KiCad PCB Design Fundamentals
 
 ---
 
-## Live Websites
+## Live Projects
 
-### Personal Portfolio
+### Personal Portfolio Website
 
-https://myfirstportfolio-9539c.web.app/
+🔗 https://myfirstportfolio-9539c.web.app/
 
 ### Firebase LED Control
 
-https://ledcontrolproject-a827f.web.app/
+🔗 https://ledcontrolproject-a827f.web.app/
+
+---
+
+## Skills Acquired
+
+- Version Control using Git & GitHub
+- Web Development Fundamentals
+- Firebase Hosting & Realtime Database
+- ESP32 Programming with PlatformIO
+- GPIO, PWM and Wi-Fi Communication
+- HTTP/HTTPS Communication
+- IoT Application Development
+- Machine Learning Fundamentals
+- PCB Design using KiCad
 
 ---
 
@@ -83,3 +102,9 @@ https://ledcontrolproject-a827f.web.app/
 **Abhijith Sathyan**
 
 Artificial Intelligence & Machine Learning Student
+
+---
+
+## Status
+
+🚧 Internship in Progress
