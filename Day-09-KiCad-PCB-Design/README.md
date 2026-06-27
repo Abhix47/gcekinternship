@@ -20,4 +20,4 @@ Understand the PCB design workflow using KiCad, including schematic creation, co
 
 ## Learning Outcome
 
-This session introduced the fundamentals of PCB design using KiCad. It focused on creating PCB layouts, understanding component placement, and learning the overall PCB design workflow for embedded systems and IoT applications.
+Developed an understanding of the PCB design process using KiCad, including schematic creation, PCB layout design, component placement, routing, and Design Rule Checking (DRC). These concepts provide the foundation for designing printed circuit boards for embedded systems and IoT applications.
