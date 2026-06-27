@@ -2,7 +2,7 @@
 
 ## Objective
 
-Explore the PCB design workflow using KiCad and understand the process of converting electronic schematics into PCB layouts.
+Understand the PCB design workflow using KiCad, including schematic creation, component placement, routing, and PCB layout design.
 
 ## Topics Covered
 
